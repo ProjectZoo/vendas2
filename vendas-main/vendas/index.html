@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos Medicinais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="FAZENDA TEGRIDADE.jpg" alt="">
+            </div>
+            <input type="text" placeholder="Encontre o suplemento mais potente do mercado" class="search-bar">
+            <div class="cart" onclick="toggleCart()">
+                <img src="car.webp" alt="Carrinho">
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+        <nav>
+            <ul class="bar">
+                <li><a href="#">Top 10</a></li>
+                <li><a href="#">Lançamentos</a></li>
+                <li><a href="#">Ervas</a></li>
+                <li><a href="#">Objetivos</a></li>
+                <li><a href="#">Roupas</a></li>
+                <li><a href="#">Venha conhecer a Fazenda Integridade</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>PRODUTOS MEDICINAIS</h1>
+        <section class="products">
+            <div class="product-card" id="product-1" onclick="addToCart(this)" data-price="100.00">
+                <span class="product-number">1</span>
+                <img src="1.webp" alt="Produto 1">
+                <h3>(TOP) Suplemento Thuck PACOTE (1KG)</h3>
+                <p class="product-price">R$ 100,00</p>
+                <ul>
+                    <li>Fornece alta concentração de proteínas</li>
+                    <li>Ajuda na hipertrofia</li>
+                    <li>Permite alta potência</li>
+                </ul>
+            </div>
+            <div class="product-card" id="product-2" onclick="addToCart(this)" data-price="50.00">
+                <span class="product-number">2</span>
+                <img src="2.webp" alt="Produto 2">
+                <h3>Pó Proteico do Carvani PACOTE (200G)</h3>
+                <p class="product-price">R$ 50,00</p>
+                <ul>
+                    <li>O mais consumido na França</li>
+                    <li>Fortalece os dependentes</li>
+                    <li>Visto na hora</li>
+                </ul>
+            </div>
+            <div class="product-card" id="product-3" onclick="addToCart(this)" data-price="150.00">
+                <span class="product-number">3</span>
+                <img src="3.webp" alt="Produto 3">
+                <h3>Ultimate Whey Protein PACOTE (2KG)</h3>
+                <p class="product-price">R$ 150,00</p>
+                <ul>
+                    <li>O mais clássico do mercado</li>
+                    <li>Aumenta disposição</li>
+                    <li>Age no corpo de forma instantânea</li>
+                </ul>
+            </div>
+            <div class="product-card" id="product-4" onclick="addToCart(this)" data-price="200.00">
+                <span class="product-number">4</span>
+                <img src="4.jfif" alt="Produto 4">
+                <h3>Whey Protein Supreme PACOTE (2KG)</h3>
+                <p class="product-price">R$ 200,00</p>
+                <ul>
+                    <li>Neo glicólise</li>
+                    <li>A preferida de Albert Einstein</li>
+                    <li>Alta garantia de alta performance</li>
+                </ul>
+            </div>
+        </section>
+        <button class="see-more">+ VER MAIS</button>
+    </main>
+    <footer>
+        <p>Fazenda Integridade Produtos Medicinais LTDA - Todos os direitos reservados</p>
+    </footer>
+    <div id="cart-popup" class="cart-popup">
+        <div class="cart-content">
+            <h2>Carrinho de Compras</h2>
+            <ul id="cart-items"></ul>
+            <p id="total-price">Total: R$ 0,00</p>
+            <button onclick="checkout()">Finalizar Compra</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

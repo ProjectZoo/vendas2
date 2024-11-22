@@ -1,0 +1,241 @@
+/* Estilos gerais */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column; /* Garante que o footer fique no final da página */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Distribui os elementos horizontalmente */
+    align-items: center; /* Alinha os elementos verticalmente */
+    padding: 20px;
+    background-color: #c89632;
+}
+.header-content img{
+    width: 100px;
+
+}
+/* Barra de busca */
+.search-bar {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 400px; /* Ajuste a largura conforme necessário */
+}
+
+/* Carrinho */
+.cart {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.cart img {
+    width: 30px;
+    height: 30px;
+}
+
+.cart-count {
+    background-color: #f00;
+    color: #fff;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+main {
+    flex: 1; /* Permite que o conteúdo principal ocupe o espaço disponível */
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Produtos */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta o tamanho dos cards */
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    background-color: #2762e3;
+    color: white;
+    border-radius: 20px;
+    position: relative;
+}
+
+.product-card img {
+    max-width: 150px; /* Define largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Centraliza horizontalmente */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    margin-bottom: 10px;
+}
+
+.product-number {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgb(24, 244, 24);
+    color: #2964a0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.product-card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px; /* Espaço entre o título e a lista */
+}
+
+.product-card ul {
+  text-align: left;
+  list-style-type: disc; /* Adiciona marcadores de lista */
+  padding-left: 20px; /* Adiciona espaçamento à esquerda */
+}
+.see-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: #1E90FF; /* Cor do texto */
+    background: white; /* Cor do fundo */
+    border: 2px solid #1E90FF; /* Cor do contorno */
+    border-radius: 20px; /* Borda arredondada */
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.3s ease; /* Animação suave */
+}
+
+footer {
+  background-color: #c89632;
+  padding: 20px 0;
+  color: white;
+  text-align: center;
+  margin-top: auto; /* Empurra o footer para baixo */
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px; /* Adicionei um padding aqui também */
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff; /* Cor de fundo do menu */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona sombra ao redor do menu */
+}
+
+nav li {
+    margin: 0 10px; /* Espaçamento entre os itens do menu */
+}
+
+nav a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);  /* Cor do texto do menu - alterei para branco para contraste */
+    padding: 10px 15px; /* Aumentei o padding vertical e adicionei padding horizontal*/
+    display: block; /* Garante que o link ocupe toda a área do item da lista */
+    font-weight: bold;
+    border-radius: 10px;
+}
+.logo {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 120px; /* Ajuste o tamanho conforme necessário */
+    height: 120px;
+    margin: 0 ;
+}
+
+.logo {
+    height: auto;
+}
+
+header {
+    position: sticky;
+    top: 0; /* Mantém o cabeçalho fixo no topo da página */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+    width: 100%;
+    background-color: #c89632; /* Cor de fundo do cabeçalho */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar efeito de profundidade */
+}
+
+.checkout {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1001;
+}
+
+.checkout main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-details {
+    text-align: center;
+}
+.cart-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.cart-content {
+    text-align: center;
+}
+
+.cart-content h2 {
+    margin-bottom: 20px;
+}
+
+.cart-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-content ul li {
+    margin-bottom: 10px;
+}
+
+.cart-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-content button:hover {
+    background-color: #0056b3;
+}
